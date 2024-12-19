@@ -31,4 +31,10 @@ ol {
 button {
     all: unset;
     cursor: pointer;
+
+    :focus {
+        border: none;
+        box-shadow: none;
+        outline: none;
+    }
 }

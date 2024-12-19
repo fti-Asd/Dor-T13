@@ -67,12 +67,26 @@
     .clock-items {
         font-size: clamp(1.7rem, calc(0.5rem + 3vw), 2rem);
         font-weight: 700;
+        display: flex;
+        gap: 5px;
+        height: fit-content;
+        justify-content: start;
+
+        @include media-query(576px) {
+            justify-content: center;
+        }
 
         .clock-item {
+            display: inline-block;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
             &:nth-child(2n + 1) {
+                width: 60px;
+                aspect-ratio: 1;
                 color: $green-200;
                 background-image: $gradient-inner-to-top-left;
-                padding: 10px;
             }
         }
     }
