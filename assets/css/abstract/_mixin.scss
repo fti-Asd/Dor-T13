@@ -1,0 +1,68 @@
+@each $key, $val in $colors {
+    .text-#{$key} {
+        color: $val;
+    }
+    .bg-#{$key} {
+        background-color: $val;
+    }
+
+    // light variations
+    @for $i from 1 through 9 {
+        .text-#{$key}-light-#{$i} {
+            color: mix(white, $val, $i * 10%);
+        }
+        .bg-#{$key}-light-#{$i} {
+            background-color: mix(white, $val, $i * 10%);
+        }
+    }
+
+    // dark variations
+    @for $i from 1 through 9 {
+        .text-#{$key}-dark-#{$i} {
+            color: mix(black, $val, $i * 10%);
+        }
+        .bg-#{$key}-dark-#{$i} {
+            background-color: mix(black, $val, $i * 10%);
+        }
+    }
+}
+
+//gradients
+@each $key, $val in $gradients {
+    .bg-gradient-#{$key} {
+        background-image: $val;
+    }
+}
+
+@mixin gradient-border-style($direction) {
+    position: relative;
+    border-radius: 3px;
+    z-index: 0;
+    @if $direction == "left" {
+        background-image: $gradient-outer-to-left;
+    } @else if $direction == "right" {
+        background-image: $gradient-outer-to-right;
+    }
+}
+
+@mixin gradient-border-style-after($direction) {
+    content: "";
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    left: 3px;
+    right: 3px;
+    border-radius: 3px;
+    z-index: -1;
+    @if $direction == "left" {
+        background-image: $gradient-inner-to-left;
+    } @else if $direction == "right" {
+        background-image: $gradient-inner-to-right;
+    }
+}
+
+@mixin media-query($max-width) {
+    @media (max-width: $max-width) {
+        @content;
+    }
+}

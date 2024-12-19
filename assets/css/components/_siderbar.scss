@@ -1,0 +1,41 @@
+.siderbar {
+    @include gradient-border-style("right");
+    padding: 30px;
+    color: $gray-200;
+    height: 100%;
+
+    &::after {
+        @include gradient-border-style-after("right");
+    }
+
+    .logo-container {
+        width: 80%;
+        min-width: 100px;
+    }
+
+    ul {
+        width: 80%;
+
+        li {
+            background-color: transparent;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: clamp(0.6rem, calc(0.5rem + 3vw), 1rem);
+
+            &:hover,
+            &:focus {
+                background-color: $green-200;
+                color: white;
+            }
+
+            svg {
+                width: 16%;
+            }
+        }
+        .active {
+            background-color: $green-200;
+            color: white;
+        }
+    }
+}
