@@ -19,14 +19,12 @@
         .date-items {
             .date-item:nth-child(2n + 1) {
                 font-size: clamp(0.4rem, calc(0.2rem + 3vw), 1rem);
-                font-family: "pinnar";
                 color: $green-200;
             }
         }
 
         span {
             font-size: clamp(0.7rem, calc(0.3rem + 3vw), 1.2rem);
-            font-family: "pinnar";
         }
     }
 
@@ -42,14 +40,12 @@
         .date-items {
             .date-item:nth-child(2n + 1) {
                 font-size: clamp(0.4rem, calc(0.2rem + 3vw), 1rem);
-                font-family: "pinnar";
                 color: $green-200;
             }
         }
 
         span {
             font-size: clamp(0.7rem, calc(0.3rem + 3vw), 1.2rem);
-            font-family: "pinnar";
         }
     }
 
@@ -61,8 +57,7 @@
 
     h5 {
         font-size: clamp(0.4rem, calc(0.2rem + 3vw), 1rem);
-        font-weight: 700;
-        font-family: "pinnar";
+        font-weight: 70;
     }
 
     p {
