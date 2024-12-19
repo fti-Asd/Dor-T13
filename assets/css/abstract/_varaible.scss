@@ -1,17 +1,17 @@
+$white-900-a: rgba(255, 255, 255, 0.1);
 $black-800: #232725;
-$black-800-a: rgb(35, 39, 37, 0.5);
+$black-800-a: rgb(35, 39, 37, 0.1);
 $black-900: #1b1d1c;
 $black-900-a: rgba(31, 33, 32, 0.96);
 $green-200: #00a693;
 $gray-200: #dcdcdc;
 $gray-300: rgba(158, 158, 158);
-$gray-300-a: rgba(158, 158, 158, 0.1);
 $gray-400: #3b3e3c;
-$gray-900-a: rgba(0, 0, 0, 0.1);
+$gray-900-a: rgba(0, 0, 0, 0.4);
 $gradient-outer-to-right: linear-gradient(
     to right,
-    $black-800-a 0%,
-    $gray-300-a 90%
+    $black-800-a 50%,
+    $white-900-a 90%
 );
 $gradient-inner-to-right: linear-gradient(
     to right,
@@ -22,7 +22,7 @@ $gradient-inner-to-right: linear-gradient(
 $gradient-outer-to-left: linear-gradient(
     to left,
     $black-800-a 0%,
-    $gray-300-a 90%
+    $white-900-a 90%
 );
 $gradient-inner-to-left: linear-gradient(
     to left,
