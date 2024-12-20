@@ -1,24 +1,20 @@
 .siderbar {
     @include gradient-border-style("right");
-    padding: 30px;
+    padding: 20px;
     color: $gray-200;
     height: 100%;
-
-    @include media-query(576px) {
-        padding: 20px;
-    }
 
     &::after {
         @include gradient-border-style-after("right");
     }
 
     .logo-container {
-        width: 80%;
+        width: 60%;
         min-width: 100px;
     }
 
     ul {
-        width: 75%;
+        width: 80%;
 
         @include media-query(1024px) {
             width: 90%;
@@ -41,9 +37,13 @@
                 color: white;
             }
 
-            svg {
-                width: 16%;
-                min-width: 20px;
+            a {
+                width: 100%;
+
+                svg {
+                    width: 16%;
+                    min-width: 20px;
+                }
             }
         }
         .active {

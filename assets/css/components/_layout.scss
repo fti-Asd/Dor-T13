@@ -13,10 +13,6 @@
     z-index: 0;
     min-width: 250px;
 
-    @include media-query(360px) {
-        // height: auto;
-    }
-
     &::before {
         content: "";
         position: absolute;
