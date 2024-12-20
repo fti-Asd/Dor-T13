@@ -1,0 +1,99 @@
+@import "../../abstract/varaible";
+@import "../../abstract/mixin";
+
+.date-wrapper {
+    min-height: 512px;
+
+    h1 {
+        font-weight: 700;
+        font-size: clamp(0.1rem, calc(0.5rem + 3vw), 1.1rem);
+    }
+
+    .custom-bg {
+        @include gradient-border-style("right");
+        padding: 15px;
+        color: white;
+
+        &::after {
+            @include gradient-border-style-after("right");
+        }
+
+        .date-items {
+            .date-item:nth-child(2n + 1) {
+                font-size: clamp(0.4rem, calc(0.2rem + 3vw), 1rem);
+                color: $green-200;
+            }
+        }
+
+        span {
+            font-size: clamp(0.7rem, calc(0.3rem + 3vw), 1.2rem);
+        }
+    }
+
+    .custom-bg-reverse {
+        @include gradient-border-style("left");
+        padding: 15px;
+        color: white;
+
+        &::after {
+            @include gradient-border-style-after("left");
+        }
+
+        .date-items {
+            .date-item:nth-child(2n + 1) {
+                font-size: clamp(0.4rem, calc(0.2rem + 3vw), 1rem);
+                color: $green-200;
+            }
+        }
+
+        span {
+            font-size: clamp(0.7rem, calc(0.3rem + 3vw), 1.2rem);
+        }
+    }
+
+    h4 {
+        font-size: clamp(1.3rem, calc(0.5rem + 3vw), 1.5rem);
+        color: $green-200;
+        font-weight: 700;
+    }
+
+    h5 {
+        font-size: clamp(0.4rem, calc(0.2rem + 3vw), 1rem);
+        font-weight: 70;
+    }
+
+    p {
+        font-size: clamp(0.6rem, calc(0.5rem + 3vw), 1rem);
+    }
+
+    .clock-items {
+        font-size: clamp(1.7rem, calc(0.5rem + 3vw), 2rem);
+        font-weight: 700;
+        display: flex;
+        gap: 5px;
+        height: fit-content;
+        justify-content: start;
+
+        @include media-query(576px) {
+            justify-content: center;
+        }
+
+        .clock-item {
+            display: inline-block;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            &:nth-child(2n + 1) {
+                width: 60px;
+                aspect-ratio: 1;
+                color: $green-200;
+                background-image: $gradient-inner-to-top-left;
+            }
+        }
+    }
+
+    .icon-container {
+        width: 40%;
+    }
+}

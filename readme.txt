@@ -8,7 +8,7 @@ use comment to verify the section
 abstracts file:
 
 _varible.scss:
-define color and font
+define color, box shadow, borders, 
 color example: $gray500 
 
 _mixins.scss:
@@ -21,6 +21,7 @@ _footer.scss
 _header.scss
 _members.scss
 _emptystate.scss
+(button, footer, header, siderbar, card)
 
 common things like footer, button, breadcrumbs and ...
 
@@ -57,3 +58,5 @@ the first content => 5h
 the second content => 1h and 15 min
 
 pagination is used only in => product list + blog list and ... so just import the css file of .scss in the html file of product list + blog list and ...
+
+**************************************************************************************

@@ -1,0 +1,54 @@
+.siderbar {
+    @include gradient-border-style("right");
+    padding: 20px;
+    color: $gray-200;
+    height: 100%;
+
+    &::after {
+        @include gradient-border-style-after("right");
+    }
+
+    .logo-container {
+        width: 60%;
+        min-width: 100px;
+    }
+
+    ul {
+        width: 80%;
+
+        @include media-query(1024px) {
+            width: 90%;
+        }
+
+        @include media-query(576px) {
+            width: 100%;
+        }
+
+        li {
+            background-color: transparent;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: clamp(0.2rem, calc(0.2rem + 3vw), 0.8rem);
+
+            &:hover,
+            &:focus {
+                background-color: $green-200;
+                color: white;
+            }
+
+            a {
+                width: 100%;
+
+                svg {
+                    width: 16%;
+                    min-width: 20px;
+                }
+            }
+        }
+        .active {
+            background-color: $green-200;
+            color: white;
+        }
+    }
+}

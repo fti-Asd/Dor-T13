@@ -1,0 +1,86 @@
+@import "../../abstract/varaible";
+@import "../../abstract/mixin";
+
+.discount-wrapper {
+    min-height: 512px;
+
+    h1 {
+        font-weight: 700;
+        font-size: clamp(0.1rem, calc(0.5rem + 3vw), 1.1rem);
+    }
+
+    .custom-bg {
+        @include gradient-border-style("right");
+        color: white;
+        padding: 15px;
+
+        &::after {
+            @include gradient-border-style-after("right");
+        }
+
+        .date-items {
+            .date-item:nth-child(2n + 1) {
+                font-size: clamp(0.4rem, calc(0.2rem + 3vw), 1rem);
+                color: $green-200;
+            }
+        }
+
+        span {
+            font-size: clamp(0.7rem, calc(0.3rem + 3vw), 1.2rem);
+        }
+    }
+
+    h4 {
+        font-size: clamp(1.3rem, calc(0.5rem + 3vw), 1.5rem);
+        color: $green-200;
+        font-weight: 700;
+    }
+
+    h5 {
+        font-size: clamp(0.4rem, calc(0.2rem + 3vw), 1rem);
+        font-weight: 70;
+    }
+
+    p {
+        font-size: clamp(0.6rem, calc(0.5rem + 3vw), 1rem);
+    }
+
+    .form-wapper{
+        .custom-bg {
+            @include gradient-border-style("right");
+            color: white;
+            padding:10px;
+    
+            &::after {
+                @include gradient-border-style-after("right");
+                background-color: #333;
+            }
+
+            input{
+                color: white;
+                border: none;
+                width: 93%;
+    
+                &:focus{
+                    border: none;
+                    box-shadow: none;
+                    outline:none
+                }
+    
+                &::placeholder{
+                    font-size: clamp(0.4rem, calc(0.2rem + 3vw), 0.9rem);
+                }
+            }
+        }
+
+        button{
+            padding: 8px;
+            background-color: $green-200;
+            color: white;
+
+            &:hover{
+                background-color: #09c2ad;
+            }
+        }
+    }
+}
